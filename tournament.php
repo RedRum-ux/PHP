@@ -34,7 +34,7 @@
                         for ($j = 0; $j < $count / 2; $j++) {  
                             if ($row1[$j] !== "slip" && $row2[$j] !== "slip") {
                                 echo $row1[$j]->Print();
-                                echo "-";
+                                echo "- ";
                                 $row2[$j]->Print();
                                 echo'<br />';
                                }
@@ -50,7 +50,7 @@
                          for ($j = 0; $j < $count / 2; $j++)
                          if ($row1[$j] !== "slip" && $row2[$j] !== "slip"){
                             echo $row1[$j]->Print();
-                            echo "-";
+                            echo "- ";
                             $row2[$j]->Print();
                             echo'<br />';
                         }
@@ -68,13 +68,13 @@
                     echo $this->name,", ", $this->date_start."<br/>";
                     $this->date_start = str_replace('.', '-', $this->date_start);
                     $this->date_start = date("Y-m-d", strtotime($this->date_start.'+ 1 days'));
-                    array_push($row2, array_pop($row1));  
+                    array_push($row2, array_pop($row1)); 
                     $first = array_shift($row1); 
                   array_unshift($row1, array_shift($row2));  
                   array_unshift($row1, $first); 
                     for ($j = 0; $j < $count/2; $j++){  
-                         echo $row1[$j]->Print();
-                         echo "-";
+                         $row1[$j]->Print();
+                         echo "- ";
                          $row2[$j]->Print();
                          echo'<br />';
                         }
